@@ -3,8 +3,8 @@ from django.http import HttpResponse , JsonResponse
 
 
 def indexView (request) :
-    return HttpResponse("<h1>HOME Page<h1>")
+    return render(request , "index.html")
 def aboutView (request) :
-    return HttpResponse("<h1>ABOUT Page<h1>")
+    return render(request , "about.html")
 def contactView (request) :
-    return HttpResponse("<h1>CONTACT Page<h1>")
+    return render(request , "website/contact.html")    
