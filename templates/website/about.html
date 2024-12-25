@@ -1,26 +1,121 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>about</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>This is my about Page</h1>
-        <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Potenti parturient erat nascetur et eget fermentum lacinia faucibus. Orci cras mauris vivamus; viverra fames per adipiscing. Aliquam felis a tellus lectus vitae pulvinar. Viverra pulvinar volutpat finibus pharetra; tellus lectus litora potenti. Facilisis platea eu consequat dis commodo curabitur donec.
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
-Feugiat commodo varius sem tellus tortor. Habitant semper metus maecenas nascetur magnis tincidunt rhoncus ullamcorper a. Curae litora aliquam fames quisque natoque auctor. Himenaeos amet mus viverra ullamcorper molestie faucibus. Dapibus rhoncus tellus mauris ante proin libero pharetra venenatis adipiscing. Tincidunt magna nulla torquent parturient torquent; ex id sapien dui. Imperdiet lacinia fames ornare malesuada, mauris vitae sollicitudin efficitur.
-
-Ad libero pellentesque maecenas sagittis a placerat. Penatibus rhoncus habitant facilisi netus, neque tellus. Dignissim vestibulum tempor ultrices auctor taciti, dapibus mauris quisque. Eget id eu consectetur; nascetur ullamcorper urna integer dignissim. Lacinia dolor quisque sem arcu libero. Parturient hac porttitor eros viverra vestibulum pellentesque. Tellus nisl odio nullam auctor tristique semper nunc duis taciti. Cursus tellus vehicula cubilia lobortis posuere aenean. Massa sit tristique elementum justo sollicitudin hendrerit metus praesent.
+<!-- start banner Area -->
+<section class="about-banner relative">
+  <div class="overlay overlay-bg"></div>
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12">
+        <h1 class="text-white">About Us</h1>
+        <p class="text-white link-nav">
+          <a href="index.html">Home </a>
+          <span class="lnr lnr-arrow-right"></span>
+          <a href="about.html"> About Us</a>
         </p>
-        <script src="" async defer></script>
-    </body>
-</html>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start about-info Area -->
+<section class="about-info-area section-gap">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 info-left">
+        <img class="img-fluid" src="{%static 'img/about/info-img.jpg' %}" alt="" />
+      </div>
+      <div class="col-lg-6 info-right">
+        <h6>About Us</h6>
+        <h1>Who We Are?</h1>
+        <p>
+          Here, I focus on a range of items and features that we use in life
+          without giving them a second thought. such as Coca Cola. Dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End about-info Area -->
+
+<!-- Start other-issue Area -->
+<section class="other-issue-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-9">
+        <div class="title text-center">
+          <h1 class="mb-10">Other issues we can help you with</h1>
+          <p>
+            We all live in an age that belongs to the young at heart. Life that
+            is.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="single-other-issue">
+          <div class="thumb">
+            <img class="img-fluid" src="{%static 'img/o1.jpg' %}" alt="" />
+          </div>
+          <a href="#">
+            <h4>Rent a Car</h4>
+          </a>
+          <p>
+            The preservation of human life is the ultimate value, a pillar of
+            ethics and the foundation.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-other-issue">
+          <div class="thumb">
+            <img class="img-fluid" src="{%static 'img/o2.jpg' %}" alt="" />
+          </div>
+          <a href="#">
+            <h4>Cruise Booking</h4>
+          </a>
+          <p>
+            I was always somebody who felt quite sorry for myself, what I had
+            not got compared.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-other-issue">
+          <div class="thumb">
+            <img class="img-fluid" src="{%static 'img/o3.jpg' %}" alt="" />
+          </div>
+          <a href="#">
+            <h4>To Do List</h4>
+          </a>
+          <p>
+            The following article covers a topic that has recently moved to
+            center stage–at least it seems.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-other-issue">
+          <div class="thumb">
+            <img class="img-fluid" src="{%static 'img/o4.jpg' %}" alt="" />
+          </div>
+          <a href="#">
+            <h4>Food Features</h4>
+          </a>
+          <p>
+            There are many kinds of narratives and organizing principles.
+            Science is driven by evidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End other-issue Area -->
+{% endblock content %}

@@ -3,5 +3,6 @@ from website.views import *
 urlpatterns = [
     path('' , indexView),
     path('about' , aboutView),
-    path('contact' , contactView)
+    path('contact' , contactView),
+    path('elements' , elementsView),
 ]

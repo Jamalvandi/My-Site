@@ -7,4 +7,6 @@ def indexView (request) :
 def aboutView (request) :
     return render(request , "website/about.html")
 def contactView (request) :
-    return render(request , "website/contact.html")    
+    return render(request , "website/contact.html")
+def elementsView (request) :
+    return render(request , "website/elements.html")    
