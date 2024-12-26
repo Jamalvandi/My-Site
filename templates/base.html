@@ -19,11 +19,9 @@
     <meta charset="UTF-8" />
     <!-- Site Title -->
     <title>Travel</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"rel="stylesheet"/>
     <!--
-        CSS
-        ============================================= -->
+        CSS============================================= -->
     <link rel="stylesheet" href="{% static 'css/linearicons.css' %}" />
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
@@ -70,8 +68,8 @@
               <li class="menu-has-children">
                 <a href="">Blog</a>
                 <ul>
-                  <li><a href="blog-home.html">Blog Home</a></li>
-                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="{% url "blog:index" %}">Blog Home</a></li>
+                  <li><a href="{% url "blog:single" %}">Blog Single</a></li>
                 </ul>
               </li>
               <li class="menu-has-children">
@@ -95,7 +93,7 @@
       </div>
     </header>
     <!-- #header -->
-    {% block content %} {% endblock content %}
+    {% block content %}{% endblock content %}
 
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
@@ -171,14 +169,14 @@
             <div class="single-footer-widget mail-chimp">
               <h6 class="mb-20">InstaFeed</h6>
               <ul class="instafeed d-flex flex-wrap">
-                <li><img src="{%static 'img/i1.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i2.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i3.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i4.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i5.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i6.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i7.jpg' %}'" alt="" /></li>
-                <li><img src="{%static 'img/i8.jpg' %}'" alt="" /></li>
+                <li><img src="{%static 'img/i1.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i2.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i3.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i4.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i5.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i6.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i7.jpg' %}" alt="" /></li>
+                <li><img src="{%static 'img/i8.jpg' %}" alt="" /></li>
               </ul>
             </div>
           </div>
