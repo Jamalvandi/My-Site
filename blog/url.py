@@ -5,5 +5,6 @@ app_name = "blog"
 
 urlpatterns = [
     path("", blogView , name= "index"),
-    path("blog/single", singleView , name= "single"),
+    path("<int:pid>", singleView , name= "single"),
+    # path("<str:name>", test , name= "test"),
 ]
