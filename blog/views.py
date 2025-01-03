@@ -7,9 +7,10 @@ def blogView (request):
     posts = {"posts": posts}
     return render(request, "blog/blog-home.html" , posts)
 def singleView(request, pid):
-    post = get_object_or_404(Post, pk = pid)
+    post = get_object_or_404(Post, pk = pid, state = 1)
     post = {"post": post}
     return render(request, "blog/blog-single.html", post)
-# def test (request , name):
-#     name ={"name":name}
-#     return render(request, "test.html" ,name)
+
+def test (request , name):
+    name ={"name":name}
+    return render(request, "test.html" ,name)
