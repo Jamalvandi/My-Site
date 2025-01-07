@@ -9,7 +9,7 @@ class Category (models.Model):
     
     
 class Post (models.Model):
-    # image
+    image = models.ImageField(default= "blog/default.jpg")
     author = models.ForeignKey(User, null= True,on_delete=models.SET_NULL)
     title = models.CharField(max_length=255)
     content = models.TextField()
