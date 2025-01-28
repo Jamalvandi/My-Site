@@ -4,9 +4,10 @@ from blog.views import * # type: ignore
 app_name = "blog"
 
 urlpatterns = [
-    path("", blogView , name= "index"),
-    path("<int:pid>", singleView , name= "single"),
-    path("category/<str:cat_name>", blogView , name= "category"),
-    path("author/<str:author_name>", blogView , name= "author"),
+    path("", blog_view , name= "index"),
+    path("<int:pid>", single_view , name= "single"),
+    path("category/<str:cat_name>", blog_view , name= "category"),
+    path("author/<str:author_name>", blog_view , name= "author"),
+    path("search/", blog_search , name= "search"),
     # path("<str:name>", test , name= "test"),
 ]
