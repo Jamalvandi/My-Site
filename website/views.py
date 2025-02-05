@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse 
+from django.http import HttpResponse , JsonResponse 
 from website.form import ContactForm, NewsletterForm
-from django.contrib import messages
 
 def index_view (request) :
     return render(request , "website/index.html")
@@ -12,10 +11,8 @@ def contact_view (request) :
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS, "Your request is submit")
         else:
             print(form.errors)
-            messages.add_message(request, messages.ERROR, "Some problem to submit")
     else:        
         form= ContactForm(request.GET)
         
