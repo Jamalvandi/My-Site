@@ -23,6 +23,11 @@ urlpatterns = [
     path("" , include("website.url")),
     path("blog/" , include("blog.url"))
 ]
+if settings.DEBUG:  # Ensure it's only enabled in debug mode
+    import debug_toolbar
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),  # Add Debug Toolbar URL
+    ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
