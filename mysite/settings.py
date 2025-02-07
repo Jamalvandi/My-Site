@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
+    
     "debug_toolbar",
+    'django_summernote',
     'blog'
 ]
 
