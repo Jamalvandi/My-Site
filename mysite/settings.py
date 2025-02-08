@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
     
+    "taggit",
     "captcha",
     "debug_toolbar",
     "django_summernote",
