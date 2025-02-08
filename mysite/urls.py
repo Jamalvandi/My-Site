@@ -23,6 +23,7 @@ urlpatterns = [
     path("" , include("website.url")),
     path("blog/" , include("blog.url")),
     path('summernote/', include('django_summernote.urls')),
+    path('captcha/', include('captcha.urls')),
     
 ]
 if settings.DEBUG:  # Ensure it's only enabled in debug mode
