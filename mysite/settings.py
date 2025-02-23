@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,6 +85,10 @@ INTERNAL_IPS = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+# captcha setting
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
