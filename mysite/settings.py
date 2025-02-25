@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "captcha",
     "debug_toolbar",
     "django_summernote",
+    'django.contrib.humanize',
     "blog",
 ]
 

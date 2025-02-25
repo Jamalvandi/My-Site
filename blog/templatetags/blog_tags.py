@@ -1,6 +1,6 @@
 from unicodedata import category
 from django import template
-from blog.models import Post , Category
+from blog.models import Post , Category ,Comment
 
 register = template.Library()
 
@@ -19,3 +19,6 @@ def postcategories():
             cat_dec[name] = posts.filter(category = name).count()
      
     return  {"categories": cat_dec}
+@register.simple_tag(name = "comments_count")
+def functions(pid):
+    return Comment.objects.filter(post = pid, approved =True).count()

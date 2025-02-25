@@ -27,3 +27,18 @@ class Post (models.Model):
         ordering = ["created_date"]
     def __str__(self):
         return "{} - {}".format(self.title, self.id)
+    
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    massage = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
+    class Meta:
+        ordering = ["created_date"]
+    def __str__(self):
+        return "{} - {}".format(self.name, self.post)
