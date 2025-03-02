@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.sitemaps",
     
-    
+    'robots',
     "taggit",
     "captcha",
     "debug_toolbar",
@@ -73,6 +73,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                # 'django.template.loaders.app_directories.Loader',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -81,13 +82,16 @@ TEMPLATES = [
         },
     },
 ]
-
+# sites
 SITE_ID = 1
-
+# IKN
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+# robots.txt
+ROBOTS_USE_SITEMAP = True
+ROBOTS_USE_HOST = False
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # captcha setting

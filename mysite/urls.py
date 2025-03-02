@@ -31,13 +31,8 @@ urlpatterns = [
     path("blog/" , include("blog.url")),
     path('summernote/', include('django_summernote.urls')),
     path('captcha/', include('captcha.urls')),
-    path(
-        "sitemap.xml",
-        sitemap,
-        {"sitemaps": sitemaps},
-        name="django.contrib.sitemaps.views.sitemap",
-    ),
-    
+    path("sitemap.xml",sitemap,{"sitemaps": sitemaps},name="django.contrib.sitemaps.views.sitemap",),
+    path('robots.txt', include('robots.urls')),
 ]
 if settings.DEBUG:  # Ensure it's only enabled in debug mode
     import debug_toolbar
