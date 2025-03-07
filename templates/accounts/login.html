@@ -24,10 +24,11 @@
           {% csrf_token %}
           <img class="mb-4" src="https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg" alt="" width="72" height="72">
           <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
-          <label for="inputEmail" class="sr-only">Username</label>
+          {% comment %} <label for="inputEmail" class="sr-only">Username</label>
           <input type="text" id="inputUsername" name = "username" class="form-control" placeholder="Username" required autofocus>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" name ="password" class="form-control" placeholder="Password" required>
+          <input type="password" id="inputPassword" name ="password" class="form-control" placeholder="Password" required> {% endcomment %}
+          {{ form.as_p }}
           <div class="checkbox mb-3">
             <label>
               <input type="checkbox" value="remember-me"> Remember me
