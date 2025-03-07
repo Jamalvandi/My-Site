@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "django_summernote",
     'django.contrib.humanize',
     "blog",
+    'accounts',
 ]
 
 MIDDLEWARE = [
