@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
     
-        <title>Signin </title>
+        <title>SinUp </title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
 
     
@@ -20,15 +20,15 @@
     
       <body class="text-center">
         
-        <form class="form-signin" action="{% url "accounts:login" %}"  method="post">
+        <form class="form-signin" action="{% url "accounts:signup" %}"  method="post">
           {% csrf_token %}
-          <img class="mb-4" src="https://i.pinimg.com/736x/09/21/fc/0921fc87aa989330b8d403014bf4f340.jpg" alt="" width="72" height="72">
-          <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+           <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
           <label for="inputEmail" class="sr-only">Username</label>
           <input type="text" id="inputUsername" name = "username" class="form-control" placeholder="Username" required autofocus>
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="inputPassword" name ="password" class="form-control" placeholder="Password" required>
-          
+          <input type="password" name="password1" placeholder="Password" class="form-control" required>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="password2" placeholder="Confirm Password" class="form-control" required>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           <p class="mt-5 mb-3 text-muted">&copy; 2024-2025</p>
         </form>
